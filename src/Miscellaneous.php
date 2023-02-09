@@ -19,10 +19,10 @@ namespace nguyenanhung\Libraries\Basic\Miscellaneous;
  */
 class Miscellaneous
 {
-    const VERSION = '1.0.0';
+    const VERSION = '2.0.0';
     const HTML_ESCAPE_CHARSET = 'UTF-8';
 
-    public function getVersion()
+    public function getVersion(): string
     {
         return self::VERSION;
     }
@@ -49,7 +49,7 @@ class Miscellaneous
         return $content;
     }
 
-    public function metronic_get_data_chart($item_list, $valueGet, $total)
+    public function metronic_get_data_chart($item_list, $valueGet, $total): string
     {
         $dataChart = '';
         if (count($item_list) > 0) {
@@ -75,7 +75,7 @@ class Miscellaneous
         return $dataChart;
     }
 
-    public function metronic_get_data_chart_report($item_list, $valueGet)
+    public function metronic_get_data_chart_report($item_list, $valueGet): string
     {
         $dataChart = '';
         if (count($item_list) > 0) {
