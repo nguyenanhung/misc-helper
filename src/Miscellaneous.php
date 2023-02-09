@@ -19,7 +19,7 @@ namespace nguyenanhung\Libraries\Basic\Miscellaneous;
  */
 class Miscellaneous
 {
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
     const HTML_ESCAPE_CHARSET = 'UTF-8';
 
     public function getVersion()
