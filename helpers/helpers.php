@@ -25,7 +25,7 @@ if (!function_exists('pre_print_r_die')) {
     }
 }
 if (!function_exists('misc_get_pagination_number')) {
-    function misc_get_pagination_number($str)
+    function misc_get_pagination_number($str): int
     {
         $str = str_replace('trang-', '', $str);
         $str = str_replace('Trang-', '', $str);
