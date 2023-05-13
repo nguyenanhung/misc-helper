@@ -19,7 +19,7 @@ namespace nguyenanhung\Libraries\Basic\Miscellaneous;
  */
 class Miscellaneous
 {
-    const VERSION = '1.0.1';
+    const VERSION = '1.0.2';
     const HTML_ESCAPE_CHARSET = 'UTF-8';
 
     public function getVersion()
@@ -49,16 +49,17 @@ class Miscellaneous
         return $content;
     }
 
-    public function metronic_get_data_chart($item_list, $valueGet, $total)
+    public function metronic_get_data_chart($itemList, $valueGet, $total)
     {
         $dataChart = '';
-        if (count($item_list) > 0) {
+        $countItemList = count($itemList);
+        if ($countItemList > 0) {
             $dataChart .= '[';
-            foreach ($item_list as $key => $value) {
+            foreach ($itemList as $key => $value) {
                 $dataChart .= '{' . '"country" : ' . '"' . $value->$valueGet . '", ';
                 $dataChart .= '"visits" : ' . $value->sl . ', ';
                 $dataChart .= '"color" : ' . '"#FF9E01"';
-                if ($key === count($item_list) - 1) {
+                if ($key === $countItemList - 1) {
                     $dataChart .= '}';
                 } else {
                     $dataChart .= '}, ';
@@ -75,16 +76,17 @@ class Miscellaneous
         return $dataChart;
     }
 
-    public function metronic_get_data_chart_report($item_list, $valueGet)
+    public function metronic_get_data_chart_report($itemList, $valueGet)
     {
         $dataChart = '';
-        if (count($item_list) > 0) {
+        $countItemList = count($itemList);
+        if ($countItemList > 0) {
             $dataChart .= '[';
-            foreach ($item_list as $key => $value) {
+            foreach ($itemList as $key => $value) {
                 $dataChart .= '{' . '"country" : ' . '"' . date('d-m-Y', strtotime($value->date)) . '", ';
                 $dataChart .= '"visits" : ' . $value->$valueGet . ', ';
                 $dataChart .= '"color" : ' . '"#FF9E01"';
-                if ($key === count($item_list) - 1) {
+                if ($key === $countItemList - 1) {
                     $dataChart .= '}';
                 } else {
                     $dataChart .= '}, ';
