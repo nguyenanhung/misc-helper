@@ -39,6 +39,8 @@ class Miscellaneous
 
     public static function commonMessageVietnamTelco($content = '', $type = 'length', $count_type = 'default')
     {
+        $type = strtolower($type);
+
         if ($type === 'length') {
             return strlen($content);
         }
