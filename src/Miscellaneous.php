@@ -19,7 +19,7 @@ namespace nguyenanhung\Libraries\Basic\Miscellaneous;
  */
 class Miscellaneous
 {
-    const VERSION = '2.0.0';
+    const VERSION = '2.0.1';
     const HTML_ESCAPE_CHARSET = 'UTF-8';
 
     public function getVersion(): string
@@ -39,26 +39,29 @@ class Miscellaneous
 
     public static function commonMessageVietnamTelco($content = '', $type = 'length', $count_type = 'default')
     {
+        $type = mb_strtolower($type);
+
         if ($type === 'length') {
-            return strlen($content);
+            return mb_strlen($content);
         }
         if ($type === 'count' && $count_type === 'default') {
-            return ceil(strlen($content) / 160);
+            return ceil(mb_strlen($content) / 160);
         }
 
         return $content;
     }
 
-    public function metronic_get_data_chart($item_list, $valueGet, $total): string
+    public function metronic_get_data_chart($itemList, $valueGet, $total): string
     {
         $dataChart = '';
-        if (count($item_list) > 0) {
+        $countItemList = count($itemList);
+        if ($countItemList > 0) {
             $dataChart .= '[';
-            foreach ($item_list as $key => $value) {
+            foreach ($itemList as $key => $value) {
                 $dataChart .= '{' . '"country" : ' . '"' . $value->$valueGet . '", ';
                 $dataChart .= '"visits" : ' . $value->sl . ', ';
                 $dataChart .= '"color" : ' . '"#FF9E01"';
-                if ($key === count($item_list) - 1) {
+                if ($key === $countItemList - 1) {
                     $dataChart .= '}';
                 } else {
                     $dataChart .= '}, ';
@@ -75,16 +78,17 @@ class Miscellaneous
         return $dataChart;
     }
 
-    public function metronic_get_data_chart_report($item_list, $valueGet): string
+    public function metronic_get_data_chart_report($itemList, $valueGet): string
     {
         $dataChart = '';
-        if (count($item_list) > 0) {
+        $countItemList = count($itemList);
+        if ($countItemList > 0) {
             $dataChart .= '[';
-            foreach ($item_list as $key => $value) {
+            foreach ($itemList as $key => $value) {
                 $dataChart .= '{' . '"country" : ' . '"' . date('d-m-Y', strtotime($value->date)) . '", ';
                 $dataChart .= '"visits" : ' . $value->$valueGet . ', ';
                 $dataChart .= '"color" : ' . '"#FF9E01"';
-                if ($key === count($item_list) - 1) {
+                if ($key === $countItemList - 1) {
                     $dataChart .= '}';
                 } else {
                     $dataChart .= '}, ';
