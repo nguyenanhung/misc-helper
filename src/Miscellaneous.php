@@ -19,7 +19,7 @@ namespace nguyenanhung\Libraries\Basic\Miscellaneous;
  */
 class Miscellaneous
 {
-    const VERSION = '2.0.1';
+    const VERSION = '2.0.2';
     const HTML_ESCAPE_CHARSET = 'UTF-8';
 
     public function getVersion(): string
@@ -98,7 +98,6 @@ class Miscellaneous
         } else {
             $dataChart = '[]';
         }
-
         return $dataChart;
     }
 }
