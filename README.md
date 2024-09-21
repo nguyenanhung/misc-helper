@@ -1,4 +1,7 @@
-[![Latest Stable Version](http://poser.pugx.org/nguyenanhung/basic-miscellaneous-helper/v)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper) [![Total Downloads](http://poser.pugx.org/nguyenanhung/basic-miscellaneous-helper/downloads)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/basic-miscellaneous-helper/v/unstable)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper) [![License](http://poser.pugx.org/nguyenanhung/basic-miscellaneous-helper/license)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/basic-miscellaneous-helper/require/php)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper)
+[![Latest Stable Version](https://img.shields.io/packagist/v/nguyenanhung/basic-miscellaneous-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper)
+[![Total Downloads](https://img.shields.io/packagist/dt/nguyenanhung/basic-miscellaneous-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper)
+[![License](https://img.shields.io/packagist/l/nguyenanhung/basic-miscellaneous-helper.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/nguyenanhung/basic-miscellaneous-helper/php)](https://packagist.org/packages/nguyenanhung/basic-miscellaneous-helper)
 
 # PHP Miscellaneous Helper
 
